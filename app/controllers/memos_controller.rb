@@ -8,7 +8,7 @@ class MemosController < ApplicationController
     end
     
     def create
-        memo = Memo.new(title:params[:title], body:params[:body])
+        memo = Memo.new(title:params[:title], body:params[:body], category_id:params[:select_id])
         if memo.save
             redirect_to root_path
         else
@@ -31,6 +31,7 @@ class MemosController < ApplicationController
         memo = Memo.find(params[:id])
         memo.title = params[:title]
         memo.body = params[:body]
+        memo.category_id = params[:select_id]
         if memo.save
             redirect_to root_path
         end
