@@ -23,5 +23,17 @@ class MemosController < ApplicationController
         redirect_to root_path
     end
     
+    def edit
+        @memo = Memo.find(params[:id])
+    end
+    
+    def update
+        memo = Memo.find(params[:id])
+        memo.title = params[:title]
+        memo.body = params[:body]
+        if memo.save
+            redirect_to root_path
+        end
+    end
     
 end
