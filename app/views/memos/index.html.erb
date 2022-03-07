@@ -1,1 +1,21 @@
-<h1>Memo List</h1>
+<div class="mb-3">
+    <h1>Memo List</h1>
+</div>
+
+<div class="row">
+    <% @memos.each do |memo| %>
+        <div class="col-md-4">
+            <div class="mb-4">
+                <div class="list-group">
+                    <div class="list-group-item list-group-item-primary">
+                        <h5><%= memo.title %></h5>
+                        <p>カテゴリ未設定</p>
+                    </div>
+                    <div class="list-group-item list-group-item-default">
+                        <%= memo.body %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>
