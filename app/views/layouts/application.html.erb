@@ -27,7 +27,9 @@
                 Category
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                
+                <% @categories.each do |category| %>
+                  <li><a class="dropdown-item" href="/categories/<%= category.id %>"><%= category.name %></a></li>
+                <% end %>
               </ul>
             </li>
           </ul>
