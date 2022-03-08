@@ -7,4 +7,10 @@
 ・同じメモの内容や空のメモはデータベースに保存されない機能
 
 アプリケーション内で使用している技術一覧 
-・HTML ・CSS ・Bootstrap ・Ruby ・Ruby on Rails ・SQLite
+・HTML 
+・CSS 
+・Bootstrap 
+・Ruby 
+・Ruby on Rails 
+・git
+・github
